@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CRUD - Desafio final</title>
+	<link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="overlay"><p>Requisição OK</p></div>
+	<article>
+		<h1>C.R.U.D - Desafio final</h1>
+		<h2 style="text-decoration: line-through;">criarCurso: recebe todos os dados por parâmetro e adiciona na lista de cursos
+			como objeto.</h2>
+		<h2 style="text-decoration: line-through;">exibirCurso: recebe o id de um curso por parâmetro e imprime todos os dados
+		do curso selecionado.</h2>
+		<h2 style="text-decoration: line-through;">atualizarCurso: recebe todos os dados por parâmetro e atualiza na lista de
+		cursos.</h2>
+		<h2 style="text-decoration: line-through;">deletarCurso: recebe o id por parâmetro e remove o curso selecionado da lista.</h2>
+		<h2 style="text-decoration: line-through;">listaCursos: imprime todos os curso</h2>
+	</article>
+
+	<section>
+		<p>Exibir curso</p>
+		<form id="formulario_exibir">
+			<label>Id:</label>
+			<input type="number" id="id_curso"><br>
+			<button type="button" onclick="exibirCurso()" value="Exibir">Exibir</button>
+		</form>
+		<p id="exibir" class="mensagem"></p>
+	</section>
+
+	<section>
+		<p>Atualizar curso</p>
+		<form id="formulario_atualizar" method="get">
+			<label>Id:</label>
+			<input type="number" id="id_curso_atualizar" disabled><br>
+			<label> Título do curso: </label>
+			<input type="text" id="titulo_atualizar"><br>
+			<label> Descrição: </label>
+			<input type="text" id="descricao_atualizar"><br>
+			<label> Imagem: </label>
+			<input type="text" id="imagem_atualizar"><br>
+			<label> Nome do professor: </label>
+			<input type="text" id="professor_atualizar"><br>
+			<label> Lista de aulas: </label>
+			<input type="text" id="aulas_atualizar"><br>
+			<button type="button" onclick="alterar('Curso atualizado')" value="Alterar">Alterar</button>
+		</form>
+	</section>
+
+	<section>
+		<p>Criar curso</p>
+		<form id="criar_curso" method="get">
+			<label>Id:</label>
+			<input type="number" id="id_curso_criar"><br>
+			<label> Título do curso: </label>
+			<input type="text" id="titulo_criar"><br>
+			<label> Descrição: </label>
+			<input type="text" id="descricao_criar"><br>
+			<label> Imagem: </label>
+			<input type="text" id="imagem_criar">Insira a URL da imagem (JPG, PNG, WEBPP) <br>
+			<label> Nome do professor: </label>
+			<input type="text" id="professor_criar"><br>
+			<label> Lista de aulas: </label>
+			<input type="text" id="aulas_criar"><br>
+			<button type="button" onclick="criar('Curso criado')" value="Inserir">Inserir</button>
+		</form>
+	</section>
+
+	<section>
+		<p>Listar cursos</p>
+		<button type="button" onclick="listarCursos()" value="Listar">Listar</button>
+		<ul id="listar"></ul>
+	</section>
+
+
+	<script language="javascript" src="dado_teste.js"></script>
+	<script language="javascript" src="script.js"></script>
+</body>
+
+</html>
